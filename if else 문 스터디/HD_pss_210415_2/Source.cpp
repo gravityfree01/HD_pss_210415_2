@@ -25,7 +25,7 @@ void main() {
 
 		else (input > 10); {
 			printf("Erorr");
-		}input++;
+		}
 	}
 	fgetc(stdin);
 }
