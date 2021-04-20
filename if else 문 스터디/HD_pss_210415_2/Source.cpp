@@ -2,30 +2,25 @@
 void main() {
 	
 	
-	int i = 1;
-	int input =1;
+	int i, j;
 
-	printf("1~9의 수를 입력하면 구구단이 출력됩니다.\n");
-	printf("0을 입력하면 프로그램이 종료됩니다.\n");
-	scanf_s("%d",&input);
-	while (i <= 9) {
-		printf("%d*%d=%d\n", input, i, input * i);
-		i += 1;
-		while (i >10) {
-			
-			if (input == 0) {
-				printf("종료");
-				break;
-			}
+	while (true) {
+		printf("1~9의 수를 입력하면 구구단이 출력됩니다.\n");
+		printf("0을 입력하면 프로그램이 종료됩니다.\n");
 
+		scanf_s("%d", &i);
+		if (i == 0) {
+			printf("프로그램 종료!\n");
+			break;
+		}
+		if (i < 0 || i>9) {
+			printf("Error\n");
+		}
+		else {
+			for (j = 1; j <= 9; j++)
+			{
+				printf("%d * %d = %d\n", i, j, i * j);
 
-			else if (i > 10) {
-				printf("Erorr");
-
-			}
-
-			else (input > 10); {
-				printf("Erorr");
 			}
 		}
 	}
